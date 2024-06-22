@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  api:
+    container_name: api
+    command: node apps/api/index.js
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - BUILD_CONTEXT=api
+    ports:
+      - "3000:3000"
+
+  api2:
+    container_name: api2
+    command: node apps/api2/index.js
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - BUILD_CONTEXT=api2
+    ports:
+      - "3001:3001"

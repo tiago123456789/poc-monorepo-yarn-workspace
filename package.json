@@ -1,0 +1,17 @@
+{
+  "name": "poc-monorepo-yarnworkspace",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "api:start:dev": "yarn workspace @monorepo/api start:dev",
+    "api2:start:dev": "yarn workspace @monorepo/api2 start:dev"
+  }
+
+}
