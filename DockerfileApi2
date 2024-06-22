@@ -14,4 +14,4 @@ RUN yarn install
 
 COPY ./apps/api2 apps/api2
 
-CMD ["node", "index.js"]
+CMD ["node", "apps/api2/index.js"]
